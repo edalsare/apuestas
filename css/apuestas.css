@@ -4,6 +4,7 @@
 .visible{
     display: inherit !important;
 }
+<<<<<<< HEAD
 h2{
     color: blue;
     font-size: 24px;
@@ -34,3 +35,20 @@ h2{
    
 }
  
+=======
+#confirm{
+   display:none;
+    float: left;
+    z-index: 9999;
+    background: #ff3456;
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+#formularioApuesta{
+    position: fixed;
+}
+.novisible{
+    display: none;
+}
+>>>>>>> 7f8c2d3d7b0fb5f44036778832eea20ac2d14e46

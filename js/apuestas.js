@@ -44,18 +44,19 @@ $(document).ready(function() {
     })
     
     $('#fecha').change(function(){
+        $('#divPartidos').removeClass('visible');
                 $.ajax({
             type: 'POST',
             url:'consultas.php',
             data:$('#formularioApuesta').serialize(),
             success: function(data){
-                
                 $('#partidos').html(data);
             }
         })
     })
     $('#partidos').change(function(){
         var idP=$(this).val();
+        //llenar equiposmpara apostar
         $("#equipoApostado").load("../pags/lib/llenarcomboapuesta.php",{idpartido:idP});
     })
     $('#otroequipo1').change(function(){
@@ -65,7 +66,27 @@ $(document).ready(function() {
     $('#otroequipo2').change(function(){
              var rival = $('#otroequipo1').val();        
         $('#equipoApostado').html("<option value='seleccion'>selecione equipo</option><option>"+rival+"</option><option>"+$(this).val()+"</option>");
-                            })
+                            });
+    $('#enviar').click(function(){
+        if(confirmar()){
+        $.ajax({
+            type: 'POST',url:'lib/confirmar.php',
+            data:$('#formularioApuesta').serialize(),
+            success: function(data){
+                $('#confirm').html(data);
+                $('#formulario').addClass('novisible');
+                $('#confirm').addClass('visible');
+                document.getElementById('partidos').options.selectedIndex = 0;
+                
+                $('#otroequipo1').val("");
+                $('#otroequipo2').val("");
+                $('#divPartidos').removeClass('visible');
+            }
+        })}
+    });
+    $('#cancel').click(function(){
+        $('#confirm').removeClass('visible');
+    })
 });
 function confirmar(){
     var nombre=$('#nombre').val();
@@ -85,7 +106,11 @@ function confirmar(){
             alert("verifique que todos los campos esten llenos")
             return false;
         }
+    }else if(valor<5000 || valor>300000){
+        alert('Las apuestas deben ser de un minimo de $5000 y maximo de $300000');
+        return false;
     }
+    
     if(equipo=='seleccion'){
         alert('Seleccione equipo a apostar');
         return false;
@@ -93,7 +118,19 @@ function confirmar(){
         alert('Usted no dispone de saldo suficiente para esta apuesta');
         return false;
     }
+    return true;
+}
+function confirmar2(){
+    var nombre=$('#nombre').val();
+    var valor=parseFloat($('#valor').val());
     if (confirm("desea hacer apuesta por "+valor+" del cliente "+nombre)){
         return true;
-    }return false;
+    }
+    $('#confirm').removeClass('visible');
+    $('#formulario').removeClass('novisible');
+     document.getElementById('partidos').options.selectedIndex = 0;
+     $('#otroequipo1').val("");
+     $('#otroequipo2').val("");
+     $('#divPartidos').removeClass('visible');
+    return false;
 }

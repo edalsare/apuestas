@@ -13,5 +13,7 @@
     <body>
         <h1>Bienvenidos Asesores</h1>
         <a href="ingresoAsesores.php">Agregar asesores</a>
+        <br>
+        <a href="generarSaldo.php">Agregar saldo a asesores</a>
     </body>
 </html>

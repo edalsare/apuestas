@@ -15,6 +15,6 @@ if($arr){
 }
 connectionClose($enlace);
 echo("<option value='seleccion'>selecione equipo</option><option value='".$nomEquiA."'>".$nomEquiA."</option>
-<option value='".$nomEquiB."'>".$nomEquiB."</option>");
+<option value='".$nomEquiB."'>".$nomEquiB."</option><option value='enpate'>Enpate</option>");
 
 ?>

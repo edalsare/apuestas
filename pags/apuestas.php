@@ -22,19 +22,25 @@ require_once 'validaciones.php';
                   </div>
                   </div>
               <div id="apuestas">
-              <center><h2> <label><strong>Saldo Disponible: </strong><stron></h2></center><?php 
+                  <center><h2> <label><strong>Saldo Disponible: </strong><strong>
+                  <?php
                   $enlace = connectionDB();
                   $saldoA = saldo($enlace,$_SESSION['id']);
                   echo "<strong>$ ".$saldoA."</strong>";
                   echo "<script>
                   var sal=".$saldoA.";
                   </script>";
-                  ?></stron></strong></label>
-             <form method="post" action="ingresoApuesta.php" id='formularioApuesta' onsubmit="return confirmar()">
+                  ?>
+                  </strong></label></h2></center>
+             <form method="post" action="ingresoApuesta.php" id='formularioApuesta' onsubmit="return confirmar2()">
+               <div id="confirm">
+                 <!--venta de confirmacion-->
+                 </div>
                 <div id="saldos"><!--se usa para la validacion en java script-->
                     <input type="text" id="saldo" name="saldo">
                 </div>
-                 <ul style="list-style-type:none">
+
+                 <ul id="formulario">
                     Datos Apostador:
                      <li>
                          <label>CC: </label>
@@ -89,7 +95,7 @@ require_once 'validaciones.php';
                                          ?>
                                      </datalist>
                                  </li>
-                                 <li><label>HORA: </label><input type="time" name="hora" id="hora" class="estiloinput"> </li>
+                                 <li><label>HORA COLOMBIA: </label><input type="time" name="hora" id="hora"> </li>
                              </ul>
                          </div>
                      </li>
@@ -116,6 +122,9 @@ require_once 'validaciones.php';
                             
                         </div>
                          </select>
+                     </li>
+                     <li>
+                          <button id="enviar" type="button">Enviar Apuesta</button>
                      </li>
                  </ul>
                  <div id="inputs">
