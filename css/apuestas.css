@@ -4,3 +4,33 @@
 .visible{
     display: inherit !important;
 }
+h2{
+    color: blue;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-shadow: 2px 1px #CCC;
+        
+}
+#banner { background-image: url(../images/Bookiesport_Cabezote.png);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;}
+.estiloinput{
+    border: 1px solid #039;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+}
+.button{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    width: 200px;
+    height: 32px;
+    border-radius: 6px;
+}
+#apuestas{
+   
+}
+ 

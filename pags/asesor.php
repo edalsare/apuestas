@@ -6,10 +6,10 @@
 <html lang="es">
    <head>
        <meta charset="utf-8">
-       <title>asesor</title>
+       <title>Asesor</title>
    </head>
     <body>
-        <h1>bienbenidos asesores</h1>
+        <h1>Bienvenidos Asesores</h1>
         <a href='apuestas.php'>Realizar apuesta</a>
     </body>
 </html>

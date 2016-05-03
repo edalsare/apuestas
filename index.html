@@ -3,25 +3,65 @@
       <head>
           <meta charset = "utf-8">
           <title>Inicio sesión</title>
+          <link rel="stylesheet" type="text/css" href="css/index.css">
       </head>  
+     <script src="banner/sliderengine/jquery.js"></script>
+    <script src="banner/sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="banner/sliderengine/amazingslider-1.css">
+    <script src="banner/sliderengine/initslider-1.js"></script>
       <body>
-          <center>
+       
+          <div id="login">
+              <div id="logo">
+                 <img style="absolute:left" src="images/Bookiesport_Logo.png" height="140">
+                  </div>
+            <div id="cajas">
               <form method="post" action="pags/login.php">
-                 <ul>
-                     <li>
+                 <ul style="list-style-type:none">
+                     <div id="user">
+                         <td>
                         <label>Usuario: </label>
                          <input type="text" name="usuario">
-                     </li>
-                     <li>
+                             </td>
+                    </div>
+                     <div id="pass">
+                         <td>
                          <label>Contraseña</label>
                          <input type="password" name="password">
-                     </li>
+                         </td>
+                     </div>
+                     <td>
                      <li>
                          <button type="submit">Ingresar</button>
                      </li>
+                         </td>
                  </ul>
                   
-              </form>
-          </center>
+                </form>
+              </div>
+            </div>
+    
+          <div id="banner">
+              <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1200px;margin:0px auto 56px;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="banner/images/Bookiesport_Fondo 2.png" />
+                </li>
+                <li><img src="banner/images/Bookiesport_Fondo 3.png" />
+                </li>
+                <li><img src="banner/images/Bookiesport_Fondo.png" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="banner/images/Bookiesport_Fondo 2-tn.png" /></li>
+                <li><img src="banner/images/Bookiesport_Fondo 3-tn.png" /></li>
+                <li><img src="/banner/images/Bookiesport_Fondo-tn.png" /></li>
+            </ul>
+        </div>
+    </div>
+          </div>
+          <div id="inferior">
+              <img src="images/Bookiesport_Cabezote.png" width="0px" height="150px">          
+              </div>
       </body>
 </html>

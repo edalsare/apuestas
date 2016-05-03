@@ -1,0 +1,42 @@
+#login{
+    background-image: url(../images/Bookiesport_Cabezote.png);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+#cajas{
+    align-items:center;
+    position:  
+    float: left;
+    
+     
+}
+#user{
+   padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+   
+}
+#pass{
+
+    
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+
+}
+#inferior{
+ background-image: url(../images/Bookiesport_Cabezote.png);
+    max-width: 1200px;
+    margin: 0 auto;}
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+        
+}
+        
+
+    
+  

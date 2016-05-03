@@ -8,10 +8,10 @@
 <html lang="=es">
    <head>
        <meta charset="utf-8">
-       <title>administrador</title>
+       <title>Administrador</title>
    </head>
     <body>
-        <h1>bienbenidos administradores</h1>
-        <a href="ingresoAsesores.php">agregar asesores</a>
+        <h1>Bienvenidos Asesores</h1>
+        <a href="ingresoAsesores.php">Agregar asesores</a>
     </body>
 </html>

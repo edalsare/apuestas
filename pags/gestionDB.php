@@ -5,7 +5,7 @@ function connectionDB(){
     $DB_SERVER='localhost';
     $DB_NAME='apuestas';
     $DB_USER='root';
-    $DB_PASS='Jorge1990';
+    $DB_PASS='';
     
     $enlace = mysqli_connect($DB_SERVER,$DB_USER,$DB_PASS,$DB_NAME);
     if(!$enlace){
@@ -25,11 +25,8 @@ function connectionClose($enlace){
 }
 //valida datos de usurio y redirecciona segun si es admin o asesor
 function verificarLogin($user,$enl,$pass){
-    $sql = "
-    SELECT CONTRASENA,TIPO,ID from persona where USUARIO='".$user."';
-    
-    ";
-    $result = $enl -> query($sql) or die("error al crear conexíon con DB");
+    $sql = "SELECT CONTRASENA,TIPO,ID from persona where USUARIO='".$user."'; ";
+    $result = $enl -> query($sql) or die("error al crear conexíon con DB kjbihbhij");
     connectionClose($enl);
     if($row=$result->fetch_assoc()){
     
