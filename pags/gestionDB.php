@@ -43,7 +43,7 @@ function verificarLogin($user,$enl,$pass){
             if($_SESSION['tipo']=='ADMINISTRADOR'){
                 echo("<script>alert('admin');</script>");
                 header("location: administrador.php");
-            }elseif($_SESSION['tipo']=='ASESOR'){
+            }elseif($_SESSION['tipo']=='ASESOR' || $_SESSION['tipo']=='CLIENTE'){
                 echo("<script>alert('asesor');</script>");
             header("location: asesor.php");
             }
